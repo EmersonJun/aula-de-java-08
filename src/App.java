@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) throws Exception {
        System.out.println("colections");
 
-       System.out.println("\n/////////////// Listas ///////////////");
+       System.out.println("\n/////////////// List ///////////////");
 
        //   Array list é melhor para acesso aleatorio, mas ele e pior para incercao e remocao
        List<String> arrayList = new ArrayList<>();
@@ -20,5 +20,9 @@ public class App {
         linkedList.add("php");
         linkedList.add("java");
 
+        linkedList.replaceAll(element -> element.equals("C++")? "c#" : element);
+
+        linkedList.removeIf(element -> element.equals("java"));
+        
     }
 }
